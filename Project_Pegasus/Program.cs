@@ -13,10 +13,10 @@ namespace Project_Pegasus
         {
             // Setting up the design of the Console Interface
             Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine("________________________________________________                          ");
-            Console.WriteLine("|                                               |                         ");
-            Console.WriteLine("| Project Pegasus - The Xbox One homebrew client|                         ");
-            Console.WriteLine("|_______________________________________________|                         ");
+            Console.WriteLine("     ________________________________________________                          ");
+            Console.WriteLine("     |                                               |                         ");
+            Console.WriteLine("     | Project Pegasus - The Xbox One homebrew client|                         ");
+            Console.WriteLine("     |_______________________________________________|                         ");
             Console.WriteLine("                                                                          ");
             Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.Red;
