@@ -11,6 +11,9 @@ namespace Project_Pegasus
     {
         static void Main(string[] args)
         {
+            //Create C:/Users/Public/homebrew directory if it doesn't already exist
+            System.IO.Directory.CreateDirectory(@"C:\Users\Public\homebrew");
+            
             // Setting up the design of the Console Interface
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("________________________________________________                          ");
@@ -18,13 +21,13 @@ namespace Project_Pegasus
             Console.WriteLine("| Project Pegasus - The Xbox One homebrew client|                         ");
             Console.WriteLine("|_______________________________________________|                         ");
             Console.WriteLine("                                                                          ");
-            Console.ResetColor();
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(" # Note: If running on Windows make sure to create dir C:Users//Public//homebrew");
-            Console.WriteLine(" If you have not already. Project Pegasus needs this directory to download");
-            Console.WriteLine(" your files. More information can be located in the README file.");
-            Console.ResetColor();
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            //Console.ResetColor();
+            //Console.ForegroundColor = ConsoleColor.Red;
+            //Console.WriteLine(" # Note: If running on Windows make sure to create dir C:Users//Public//homebrew");
+            //Console.WriteLine(" If you have not already. Project Pegasus needs this directory to download");
+            //Console.WriteLine(" your files. More information can be located in the README file.");
+            //Console.ResetColor();
+            //Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("                                                                          ");
             Console.WriteLine("---------------------------------------                                     ");
             Console.WriteLine("                                       |");
@@ -44,14 +47,12 @@ namespace Project_Pegasus
 
             
 
-
             // Converting user selection from string to int for the switch block
             string menuChoice_string = Console.ReadLine();
             int menuChoice = Convert.ToInt32(menuChoice_string);
 
 
-
-           
+         
             // Setting uo switch block to handle user selections
             switch (menuChoice)
             {
