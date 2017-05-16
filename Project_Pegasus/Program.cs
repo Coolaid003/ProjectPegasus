@@ -13,16 +13,16 @@ namespace Project_Pegasus
         {
             // Setting up the design of the Console Interface
             Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine("     ________________________________________________                          ");
-            Console.WriteLine("     |                                               |                         ");
-            Console.WriteLine("     | Project Pegasus - The Xbox One homebrew client|                         ");
-            Console.WriteLine("     |_______________________________________________|                         ");
+            Console.WriteLine("    ________________________________________________                          ");
+            Console.WriteLine("    |                                               |                         ");
+            Console.WriteLine("    | Project Pegasus - The Xbox One homebrew client|                         ");
+            Console.WriteLine("    |_______________________________________________|                         ");
             Console.WriteLine("                                                                          ");
             Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(" # Note: If running on Windows make sure to create dir C:Users//Public//homebrew");
-            Console.WriteLine(" If you have not already. Project Pegasus needs this directory to download");
-            Console.WriteLine(" your files. More information can be located in the README file.");
+            Console.WriteLine("     # Note: If running on Windows make sure to create dir C:Users//Public//homebrew");
+            Console.WriteLine("     If you have not already. Project Pegasus needs this directory to download");
+            Console.WriteLine("     your files. More information can be located in the README file.");
             Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("                                                                          ");
