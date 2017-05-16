@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,10 +11,6 @@ namespace Project_Pegasus
     {
         static void Main(string[] args)
         {
-            // Setting up loop to allow repeated multiple downloads
-            while (1 == 1)
-            {
-
             // Setting up the design of the Console Interface
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("________________________________________________                          ");
@@ -24,124 +20,150 @@ namespace Project_Pegasus
             Console.WriteLine("                                                                          ");
             Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(" # Note: Make sure to create dir C:Users//Public//homebrew");
+            Console.WriteLine(" # Note: If running on Windows make sure to create dir C:Users//Public//homebrew");
             Console.WriteLine(" If you have not already. Project Pegasus needs this directory to download");
             Console.WriteLine(" your files. More information can be located in the README file.");
             Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("                                                                          ");
-            Console.WriteLine("---------------------------------------                                     ");
-            Console.WriteLine("                                       |");
-            Console.WriteLine("   [Emulators for Xbox One]            |");
-            Console.WriteLine("1.Chip8     - (Chip 8 Games)           |");
-            Console.WriteLine("2.Nesbox    - (NES,SNES,GEN,GB,GBC,GBA)|");
-            Console.WriteLine("3.PSX-BOX   - (PS1 *Work in Progress*) |");
-            Console.WriteLine("4.PPSSPP    - (PSP Games)              |");
-            Console.WriteLine("5.VBA10     - (GBA Games)              |");
-            Console.WriteLine("6.Win64e10  - (N64 Games)              |");
-            Console.WriteLine("                                       | ");
-            Console.WriteLine("                                       | ");
-            Console.WriteLine("    [Xbox One Indie Games]             |");
-            Console.WriteLine("7.Dungeon Run - 2D Zelda Clone         |");
-            Console.WriteLine("                                       |");
-            Console.WriteLine("---------------------------------------");
+            Console.WriteLine("     ---------------------------------------                                     ");
+            Console.WriteLine("    |                                       |");
+            Console.WriteLine("    |   [Emulators for Xbox One]            |");
+            Console.WriteLine("    |1.Chip8     - (Chip 8 Games)           |");
+            Console.WriteLine("    |2.Nesbox    - (NES,SNES,GEN,GB,GBC,GBA)|");
+            Console.WriteLine("    |3.PSX-BOX   - (PS1 *Work in Progress*) |");
+            Console.WriteLine("    |4.PPSSPP    - (PSP Games)              |");
+            Console.WriteLine("    |5.VBA10     - (GBA Games)              |");
+            Console.WriteLine("    |6.Win64e10  - (N64 Games)              |");
+            Console.WriteLine("    |                                       | ");
+            Console.WriteLine("    |                                       | ");
+            Console.WriteLine("    |   [Xbox One Indie Games]              |");
+            Console.WriteLine("    |7.Dungeon Run - 2D Zelda Clone         |");
+            Console.WriteLine("    |                                       |");
+            Console.WriteLine("    |   [Tutorials]                         |");
+            Console.WriteLine("    |8.Sideloading apps                     |");
+            Console.WriteLine("     ---------------------------------------");
+
+            
+
+
+            // Converting user selection from string to int for the switch block
+            string menuChoice_string = Console.ReadLine();
+            int menuChoice = Convert.ToInt32(menuChoice_string);
 
 
 
-
-                // Converting user selection from string to int for the switch block
-                string menuChoice_string = Console.ReadLine();
-                int menuChoice = Convert.ToInt32(menuChoice_string);
-
-
+           
+            // Setting uo switch block to handle user selections
+            switch (menuChoice)
+            {
 
 
-                // Setting uo switch block to handle user selections
-                switch (menuChoice)
-                {
+                 // Using the WebClient Class to connect to the server and download the file to the specified path
+                case 1:                    
+                    Console.WriteLine("     Downloading Chip8 Please Wait....");
+                    WebClient Client = new WebClient();
+                    Client.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBbWpNQ19hUlc4RnM", @"C:\Users\Public\homebrew\CHIP8_XBOX_ONE_V3.rar");
+                    Console.WriteLine("Succesfully Downloaded...... :-)");
+                    break;
+                    
+                   
 
 
-                    // Using the WebClient Class to connect to the server and download the file to the specified path
-                    case 1:
-                        Console.WriteLine("Downloading Chip8 Please Wait....");
-                        WebClient Client = new WebClient();
-                        Client.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBbWpNQ19hUlc4RnM", @"C:\\Users\\Public\\homebrew\\CHIP8_XBOX_ONE_V3.rar");
-                        Console.WriteLine("Succesfully Downloaded..... Press Enter to Download Again :-)");
-                        break;
+                case 2:
+                    Console.WriteLine("     Downloading Nesbox Please Wait....");
+                    WebClient Client2 = new WebClient();
+                    Client2.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBcW9xMWw0Wlg2UjQ", @"C:\Users\Public\homebrew\NESBOX+RELEASE2+APPX+PKG.rar");
+                    Console.WriteLine("Succesfully Downloaded...... :-)");
 
-
-
-
-                    case 2:
-                        Console.WriteLine("Downloading Nesbox Please Wait....");
-                        WebClient Client2 = new WebClient();
-                        Client2.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBcW9xMWw0Wlg2UjQ", @"C:\\Users\\Public\\homebrew\\NESBOX+RELEASE2+APPX+PKG.rar");
-                        Console.WriteLine("Succesfully Downloaded Press Enter to Download Again...... :-)");
-
-                        break;
+                    break;
 
 
 
-                    case 3:
-                        Console.WriteLine("Downloading PSX-BOX Please Wait....");
-                        WebClient Client3 = new WebClient();
-                        Client3.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBckdaXzJ0U0dSMVE", @"C:\\Users\\Public\\homebrew\\psx-box-master.zip");
-                        Console.WriteLine("Succesfully Downloaded..... Press Enter to Download Again :-)");
+                case 3:
+                    Console.WriteLine("     Downloading PSX-BOX Please Wait....");
+                    WebClient Client3 = new WebClient();
+                    Client3.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBckdaXzJ0U0dSMVE", @"C:\Users\Public\homebrew\psx-box-master.zip");
+                    Console.WriteLine("     Succesfully Downloaded...... :-)");
 
-                        break;
-
-
-                    case 4:
-                        Console.WriteLine("Downloading PPPSSPP Please Wait....");
-                        WebClient Client4 = new WebClient();
-                        Client4.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBRlk3N1BHQkpRYmM", @"C:\\Users\\Public\\homebrew\\PPSSPP+Release+APPX+PKG.rar");
-                        Console.WriteLine("Succesfully Downloaded..... Press Enter to Download Again :-)");
-
-                        break;
+                    break;
 
 
-                    case 5:
-                        Console.WriteLine("Downloading VBA10 Please Wait....");
-                        WebClient Client5 = new WebClient();
-                        Client5.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBb25qVjJQRE1iUEE", @"C:\\Users\\Public\\homebrew\\VBA10_1.22.197.0_Test.rar");
-                        Console.WriteLine("Succesfully Downloaded..... Press Enter to Download Again :-)");
+                case 4:
+                    Console.WriteLine("     Downloading PPPSSPP Please Wait....");
+                    WebClient Client4 = new WebClient();
+                    Client4.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBRlk3N1BHQkpRYmM", @"C:\Users\Public\homebrew\PPSSPP+Release+APPX+PKG.rar");
+                    Console.WriteLine("     Succesfully Downloaded...... :-)");
 
-                        break;
-
-
-                    case 6:
-                        Console.WriteLine("Downloading Win64e10 Please Wait....");
-                        WebClient Client6 = new WebClient();
-                        Client6.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBTWJPeWhZU0hXRTQ", @"C:\\Users\\Public\\homebrew\\Win64e10+PKG.rar");
-                        Console.WriteLine("Succesfully Downloaded..... Press Enter to Download Again :-)");
-
-                        break;
+                    break;
 
 
-                    case 7:
-                        Console.WriteLine("Downloading Dungeon Run Please Wait....");
-                        WebClient Client7 = new WebClient();
-                        Client7.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBdmRJajZYazVFR0k", @"C:\\Users\\Public\\homebrew\\DungeonRUN1.rar");
-                        Client7.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBeVo2Y29NMWNJT2c", @"C:\\Users\\Public\\homebrew\\DungeonRUN2.rar");
-                        Client7.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBbGFUN1JvT0t1cWs", @"C:\\Users\\Public\\homebrew\\DungeonRUN3.rar");
-                        Client7.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBMk1tbHJObUNXQnM", @"C:\\Users\\Public\\homebrew\\DungeonRun4.rar");
-                        Client7.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBWjBtb1pOVVJId3c", @"C:\\Users\\Public\\homebrew\\DungeonRun_README");
-                        Console.WriteLine("Succesfully Downloaded..... Press Enter to Download Again :-)");
-                        break;
+                case 5:
+                    Console.WriteLine("     Downloading VBA10 Please Wait....");
+                    WebClient Client5 = new WebClient();
+                    Client5.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBb25qVjJQRE1iUEE", @"C:\Users\Public\homebrew\VBA10_1.22.197.0_Test.rar");
+                    Console.WriteLine("     Succesfully Downloaded...... :-)");
+
+                    break;
+
+
+                case 6:
+                    Console.WriteLine("     Downloading Win64e10 Please Wait....");
+                    WebClient Client6 = new WebClient();
+                    Client6.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBTWJPeWhZU0hXRTQ", @"C:\Users\Public\homebrew\Win64e10+PKG.rar");
+                    Console.WriteLine("     Succesfully Downloaded...... :-)");
+
+                    break;
+
+
+                 case 7:
+                    Console.WriteLine("     Downloading Dungeon Run Please Wait....");
+                    WebClient Client7 = new WebClient();
+                    Client7.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBdmRJajZYazVFR0k", @"C:\Users\Public\homebrew\DungeonRUN1.rar");
+                    Client7.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBeVo2Y29NMWNJT2c", @"C:\Users\Public\homebrew\DungeonRUN2.rar");
+                    Client7.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBbGFUN1JvT0t1cWs", @"C:\Users\Public\homebrew\DungeonRUN3.rar");
+                    Client7.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBMk1tbHJObUNXQnM", @"C:\Users\Public\homebrew\DungeonRun4.rar");
+                    Client7.DownloadFile("https://drive.google.com/uc?export=download&id=0B6C6WFjsJozBWjBtb1pOVVJId3c", @"C:\Users\Public\homebrew\DungeonRun_README");
+                    Console.WriteLine("     Succesfully Downloaded...... :-)");
+                    break;
+
+                 case 8:
+                    Console.WriteLine(" ");
+                    Console.WriteLine(" ");
+                    Console.WriteLine("     [1.] Go to your Xbox One console and restart it into developer mode if it is not already");
+                    Console.WriteLine(" ");
+                    Console.WriteLine("     [2.] Click on settings and you will see a menu that at the top shows Xbox Device Portal");
+                    Console.WriteLine(" ");
+                    Console.WriteLine("     [3.] Make sure that the option that says \"Enable Xbox Device Portal is ticked\" ");
+                    Console.WriteLine(" ");
+                    Console.WriteLine("     In addition you make sure \"Require authentication to access Xbox Device Portal\" is checked");
+                    Console.WriteLine("     you will want to set up a username and a password.");
+                    Console.WriteLine(" ");
+                    Console.WriteLine("     [4.] Once finished go back to Dev Home and make note of your Xbox IP Address along with the ");
+                    Console.WriteLine("     port number listed at the bottom right corner it will look something like 192.168.37.8:11224 ");
+                    Console.WriteLine("     (Yours may be different) Open up your web browser and type in https:// followed by your IP ");
+                    Console.WriteLine("     and port number so for example https://192.168.37.8:11224 alternatively you can also enter");
+                    Console.WriteLine("     https://XboxOne:11224 for example. Once you log in you may receive a warning about the security");
+                    Console.WriteLine("     certificate. Go ahead and proceed anyways.");
+                    Console.WriteLine(" ");
+                    Console.WriteLine("     [5.] You will now be greeted with a menu that says \"my games and apps\" near the top.  ");
+                    Console.WriteLine("     From Here it's rather simple just click Add and choose file. You will then select your chosen appx file.");
+                    Console.WriteLine("     add your dependencies if their are any, so go ahead and press next and your chosen app will install and deploy");
+                    break;
+                
 
 
                     // Throws an Exception if the user pressed an invalid option
-                    default:
-                        Console.WriteLine("Exception! Invalid Input Try Again");
-                        break;
+                default:
+                    Console.WriteLine("     Exception! Invalid Input Try Again");
+                    break;
 
 
 
 
-                }
-
-                Console.ReadLine();
             }
+
+            Console.ReadLine();
         }
     }
 }
