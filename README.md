@@ -6,7 +6,7 @@ of the internet or scroll through several pages of forum threads, this utility p
 simple way to download any and all Xbox One homebrew right to your PC for easy installation
 to your Xbox One. 
 
-![Alt text](https://upload.vstanced.com/images/2017/09/21/mr4.png "ProjectPegasus")
+![Alt text](https://i.imgur.com/n6NrGid.png "ProjectPegasus")
 
 # What Platforms does this tool support?
 ![Alt text](http://itsegment.net/wp-content/uploads/2017/01/linux-windows-mac.png "ProjectPegasus")
