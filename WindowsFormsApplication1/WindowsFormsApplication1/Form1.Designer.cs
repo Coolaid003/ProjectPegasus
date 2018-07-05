@@ -46,6 +46,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dlfolder = new System.Windows.Forms.TextBox();
+            this.btnfolder = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -217,7 +220,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(52, 411);
+            this.progressBar1.Location = new System.Drawing.Point(52, 448);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(505, 25);
             this.progressBar1.TabIndex = 13;
@@ -253,18 +256,51 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Lime;
-            this.label1.Location = new System.Drawing.Point(116, 377);
+            this.label1.Location = new System.Drawing.Point(116, 415);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(400, 16);
+            this.label1.Size = new System.Drawing.Size(368, 16);
             this.label1.TabIndex = 16;
-            this.label1.Text = "Your Homebrew will be downloaded to C:\\Users\\Public\\homebrew";
+            this.label1.Text = "Your Homebrew will be downloaded to your chosen directory";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Lime;
+            this.label2.Location = new System.Drawing.Point(49, 382);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 16);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "download dir:";
+            // 
+            // dlfolder
+            // 
+            this.dlfolder.Location = new System.Drawing.Point(143, 381);
+            this.dlfolder.Name = "dlfolder";
+            this.dlfolder.Size = new System.Drawing.Size(381, 20);
+            this.dlfolder.TabIndex = 18;
+            this.dlfolder.TextChanged += new System.EventHandler(this.dlfolder_TextChanged);
+            // 
+            // btnfolder
+            // 
+            this.btnfolder.Location = new System.Drawing.Point(530, 381);
+            this.btnfolder.Name = "btnfolder";
+            this.btnfolder.Size = new System.Drawing.Size(27, 20);
+            this.btnfolder.TabIndex = 19;
+            this.btnfolder.Text = "...";
+            this.btnfolder.UseVisualStyleBackColor = true;
+            this.btnfolder.Click += new System.EventHandler(this.btnfolder_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(693, 466);
+            this.ClientSize = new System.Drawing.Size(693, 504);
+            this.Controls.Add(this.btnfolder);
+            this.Controls.Add(this.dlfolder);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -311,6 +347,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox dlfolder;
+        private System.Windows.Forms.Button btnfolder;
     }
 }
-
